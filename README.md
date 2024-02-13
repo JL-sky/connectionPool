@@ -61,15 +61,38 @@
 
   # 配置
   MySql版本:5.7
-  操作系统版本:linux
+
+ 操作系统:linux
 
   # 编译运行
-  1.进入build文件夹下，执行以下代码编译项目
+
+1.进入conf文件下修改相关配置，默认配置如下：
+
+```txt
+ip=127.0.0.1
+port=3306
+#数据库用户名与密码
+username=root
+passwd=123456
+#要连接的数据库名称
+dbname=chat
+
+#连接池初始连接量
+initSize=10
+#连接池最大连接量
+maxSize=1024
+#最大空闲时间，默认是秒
+maxIdleTime=60
+#连接超时时间，默认是毫秒
+maxConnectionTimeout=100
+```
+
+  2.进入build文件夹下，执行以下代码编译项目
   ```bash
   cmake .. && make
   ```
 
-  2.进入bin文件夹下，执行
+  3.进入bin文件夹下，执行
 
   ```bash
   ./connectionPool

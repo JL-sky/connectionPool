@@ -21,7 +21,7 @@ bool ConnectionPool::loadConfigFile()
     string fullPath=string(path);
     string curPath=fullPath.substr(0,fullPath.find_last_of("/")+1);
     //加载配置文件路径
-    FILE* fp=fopen((curPath+"src/dbConnection/"+"mysql.cnf").c_str(),"r");
+    FILE* fp=fopen((curPath+"conf/"+"mysql.cnf").c_str(),"r");
     if(!fp)
     {
         LOG("./mysql.cnf file is not exist!");
