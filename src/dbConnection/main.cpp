@@ -4,7 +4,7 @@
 #include"connectionPool.hpp"
 using namespace std;
 
-const int dataNum=250;//测试数据量
+const int dataNum=1000;//测试数据量
 
 void connTest()
 {
@@ -110,7 +110,7 @@ int main()
     dataNum:5000    ->  time:4.45264 s
     dataNum:10000    ->  time:3.37099 s
     */
-    // singleThreadConnPoolTest();
+    singleThreadConnPoolTest();
     
     /*
     dataNum:1000    ->  time:2.48859 s
@@ -124,7 +124,7 @@ int main()
     dataNum:5000    ->  time:4.81965 s
     dataNum:10000    ->  time:1.72819 s
     */
-    mutiThreadConnectionPool();
+    // mutiThreadConnectionPool();
     // ConnectionPool::getConnectionPool();
     return 0;
 }
